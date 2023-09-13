@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
+@font-face {
+    font-family: 'Caviar';
+    src: url(/font/CaviarDreams.ttf);
+}
+
 :root{
     --border-radius:5px;
 }
 
 *{
-    font-family: 'Lato', sans-serif;
+    font-family: 'lato', sans-serif;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
@@ -61,14 +66,16 @@ footer{
 .herotittle{
     color:white;
     font-size: 6vmax;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Caviar', Times, serif;
 }
-.herotxt{
-    color:white;
-    width: 60%;
-    margin:auto;
-    margin-bottom: 30px;
-    
+h1{
+    font-size: 40px;
+}
+p{
+    font-size: 25px;
+    color: #1111119d;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 
 /* edições de classes */
@@ -89,5 +96,45 @@ footer{
     align-items: center;
     justify-content: center;
     border-radius: var(--border-radius);
-    
+}
+
+.content-row{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+.content-box{
+    text-align: center;
+    border: 1px solid black;
+}
+.content-box img{
+    width: 25%;
+}
+.img_left{
+    float: left;
+    width: 100%;
+    box-shadow: 5px 5px 10px black;
+    margin: 5px;
+}
+.img_right{
+    float: right;
+    height: 45%;
+    box-shadow: 5px 5px 10px black;
+    margin: 5px;
+}
+
+.img_left-round{
+    float: left;
+    width: 25%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px black;
+    margin: 5px;
+}
+.img_right-round{
+    float: right;
+    width: 25%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px black;
+    margin: 5px;
 }
