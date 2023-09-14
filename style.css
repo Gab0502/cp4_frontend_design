@@ -9,6 +9,8 @@
     --border-radius:5px;
 }
 
+/* contrutores universais e container */
+
 *{
     font-family: 'lato', sans-serif;
     box-sizing: border-box;
@@ -23,7 +25,7 @@ body{
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 2fr 2fr 0.1fr;
     grid-template-areas: 
                         "header header header header"
                         "aside main main main"
@@ -43,7 +45,7 @@ header{
 }
 aside{
     grid-area: aside;
-    background-color: antiquewhite;
+    background-color: rgba(192, 197, 202, 0.836);
     border-radius: var(--border-radius);
 }
 main{
@@ -138,4 +140,18 @@ p{
     border-radius: 50%;
     box-shadow: 5px 5px 10px black;
     margin: 5px;
+}
+.indice ul{
+    list-style: none;
+}
+.indice ul li{
+    padding: 5%;
+}
+.indice ul li a{
+    margin: 5%;
+    text-decoration: none;
+    color: black;
+}
+.indice ul li a:hover{
+    color: white;
 }
