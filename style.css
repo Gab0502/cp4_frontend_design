@@ -48,7 +48,7 @@ aside{
 }
 main{
     grid-area: main;
-    background-color: aliceblue;
+    background-color: white;
     border-radius: var(--border-radius);
 
 }
@@ -70,6 +70,9 @@ footer{
 }
 h1{
     font-size: 40px;
+}
+h2{
+    margin:4%
 }
 p{
     font-size: 25px;
@@ -113,14 +116,12 @@ p{
 }
 .img_left{
     float: left;
-    width: 100%;
-    box-shadow: 5px 5px 10px black;
+    height: 30%;
     margin: 5px;
 }
 .img_right{
     float: right;
     height: 45%;
-    box-shadow: 5px 5px 10px black;
     margin: 5px;
 }
 
