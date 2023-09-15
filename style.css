@@ -39,10 +39,12 @@ body{
 
 header{
     grid-area:header ;
-    background-color: #00cccc;
+    background-color:#ADD8E6;
     border-radius: var(--border-radius);
-    
+    display: flex;
+    align-items: center;
 }
+
 aside{
     grid-area: aside;
     background-color: rgba(192, 197, 202, 0.836);
@@ -83,8 +85,28 @@ p{
     margin-top: 2%;
 }
 
+nav ul li a:hover{
+    color: white;
+}
+
+
 /* edições de classes */
 
+.logo{
+    width: 65%;
+}
+.navbar{
+    display: flex;
+    list-style:none ;
+}
+.navitem{
+    padding: 15%;
+}
+.navitem a{
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+}
 .aside_content{
     position: sticky;
     top:0;
@@ -103,19 +125,6 @@ p{
     border-radius: var(--border-radius);
 }
 
-.content-row{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-   
-}
-.content-box{
-    text-align: center;
-    border: 1px solid black;
-}
-.content-box img{
-    width: 25%;
-}
 .img_left{
     float: left;
     height: 30%;
@@ -151,7 +160,4 @@ p{
     margin: 5%;
     text-decoration: none;
     color: black;
-}
-.indice ul li a:hover{
-    color: white;
 }
