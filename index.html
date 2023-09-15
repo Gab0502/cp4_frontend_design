@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+
+        <!-- estilização do header, contendo imagem de logo que levaria ao home do site e nav bar com
+        links que levariam a outras partes com informações mais especificas do site -->
         <header>
             <a href="index.html"><img src="/images/logo.png" class="logo" alt="logo"></a>
             <nav>
@@ -20,6 +25,8 @@
             </nav>
         </header>
 
+        <!-- Aside contendo uma navegação por id para achar conteudo rapidamente. Foi utilizado uma diferente
+        classe do que a utilizada no header para que elas fiquem sem o flex -->
         <aside>
             <div class="aside_content">
                 <nav class="indice">
@@ -33,12 +40,22 @@
                 </nav>
             </div>
         </aside>
-
+        <!-- main contendo conteudo principal -->
         <main>
+
+            <!-- Div relacionada ao box model, é utilizado a estilização dentro do html para mudar a imagem
+            exibida, caso contrario seria necessario criar muitas mais classes para imagens especificamente -->
+
             <div class="box_model" id="inicio" style="background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url(/images/box_model1.jpg);">
                 <h2 class="herotittle">Sobre nós</h2>
             </div>
+            
+            <!-- section contendo texto e imagem, conteudo do site -->
+
             <section>
+
+                <!-- svg animado utilizando uma classe para joga-lo para a direita  -->
+
                 <img src="/images/Diving.gif" class="img_right" alt="svg pessoa mergulhando">
                 <h1>Uma experiencia inesquecivel</h1>
                 <p>
@@ -49,9 +66,15 @@
 			        Nossa segurança irá garantir a sua segurança, porém é necessário seguir estritamente as regras impostas sobre cada localização de evento
                 </p>
             </section>
+
+            <!-- div box model para separação do conteudo -->
+
             <div class="box_model" id="servico" style="background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url(/images/box_model2.jpg);">
                 <h2 class="herotittle">Nosso Serviço</h2>
             </div>
+
+            <!-- section contendo texto e imagens -->
+
             <section>
                 <h1>Momentos inesqueciveis em familia</h1>
                 <img src="/images/Octopus.gif" class="img_right" alt="svg polvo">
@@ -62,6 +85,9 @@
                     Mergulhe de cabeça em nossos eventos subaquáticos, onde a diversão, a emoção e o mistério se encontram nas profundezas. Entre em contato conosco hoje e deixe-nos ajudá-lo a criar uma experiência verdadeiramente inesquecível (e talvez um pouco assustadora) sob as ondas. Se você sobreviver, com certeza terá muitas histórias para contar!
                 </p>
             </section>
+
+            <!-- box model para separação de conteudo -->
+
             <div class="box_model" id="eventos" style="background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)), url(/images/box_model3.jpg);">
                 <h2 class="herotittle">Eventos</h2>
             </div>
@@ -71,18 +97,27 @@
                     Imagine celebrar momentos especiais em um ambiente onde a beleza natural e a elegância se encontram, mas, ocasionalmente, uma enguia travessa pode querer participar da festa. Nossos eventos são meticulosamente planejados para oferecer a combinação perfeita entre a magia do oceano e a emoção de um evento de classe mundial - com uma pitada de imprevisibilidade, é claro.
                 </p>
                 <h2>Barco pirata</h2>
-                <img src="/images/piratafantasma.png" class="img_right-round" alt="">
+
+                <!-- imagem com para que ela fique redonda e vá para a direita -->
+
+                <img src="/images/piratafantasma.png" class="img_right-round" alt="pirata fantasma">
                 <p>
                     Em um dos nossos pacotes exclusivos, você terá a coragem de embarcar em uma aventura verdadeiramente aterrorizante. Festejar a bordo do lendário navio do temido pirata Barba Negra não é para os fracos de coração. Enquanto você dança a noite toda ao som de músicas folclóricas piratas, esteja preparado para mais do que apenas uma noite de diversão.
                     A escuridão que envolve o navio esconde segredos profanos e assombrações sinistras. Durante a festa, aparições fantasmagóricas do próprio Barba Negra e sua tripulação podem aparecer do nada, observando cada movimento dos convidados com olhos vazios e ameaçadores. Eles não são apenas parte da decoração; são espíritos sedentos por vingança e caça.
                 </p>
-                <img src="/images/pirataesqueleto.png" class="img_left-round" alt="">                
+
+                <!-- imagem com para que ela fique redonda e vá para a esquerda -->
+
+                <img src="/images/pirataesqueleto.png" class="img_left-round" alt="pirata fantasma">                
                 <p>
                     Cada canto escuro do navio esconde segredos arrepiantes e tesouros perdidos há muito tempo, mas também abriga perigos mortais. Os corredores estreitos e enigmáticos podem aprisionar convidados incautos, e as velas negras do navio parecem abrigar uma energia maligna. Quem sabe, você pode até receber uma visita surpresa de um antigo mapa do tesouro que os fantasmas adoram compartilhar, mas segui-lo pode levar a um destino sombrio e incerto.
                     Enquanto a festa continua, o medo e a adrenalina estarão constantemente à espreita. Somente os mais valentes sobreviverão a esta noite de horrores a bordo do navio amaldiçoado de Barba Negra. Se você ousar enfrentar essa experiência prepare-se para um evento verdadeiramente aterrador e inesquecível sob as estrelas sombrias.
                 </p>
                 <h2>Cidade Submersa</h2>
-                <img src="/images/deusesantigos.png" class="img_right-round">
+
+                <!-- imagem com para que ela fique redonda e vá para a direita -->
+
+                <img src="/images/deusesantigos.png" class="img_right-round" alt="criatura similar a polvo">
                 <p>
                     Em nossos pacotes, você terá a oportunidade ousada de explorar cidades submersas misteriosas. Esta é uma jornada que desafiará sua coragem e despertará seu instinto de sobrevivência. Quando você mergulhar nas profundezas destas cidades afundadas, você entrará em um mundo perdido de ruas sinuosas, edifícios antigos e artefatos misteriosos.
                     No entanto, esteja preparado para o desconhecido, pois essas cidades submersas podem estar despertando deuses antigos adormecidos. A cada esquina que você dobrar, estátuas antigas podem ganhar vida, testando sua devoção e coragem. Os templos antigos podem emitir sons enigmáticos, desafiando sua compreensão do mundo conhecido.
@@ -91,12 +126,18 @@
                     Entre em contato conosco hoje e reserve sua jornada para explorar essas cidades submersas e desvendar os mistérios que aguardam. Mas lembre-se, a emoção vem acompanhada de desafios, e os deuses antigos podem ser caprichosos e impiedosos. Você está pronto para o desafio?
                 </p>
                 <h2>Mar Profundo</h2>
-                <img src="/images/tubarao.png" class="img_right-round">
+
+                <!-- imagem com para que ela fique redonda e vá para a direita -->
+
+                <img src="/images/tubarao.png" class="img_right-round" alt="tubarão medonho">
                 <p>
                     Aqui, adentramos o território dos verdadeiros aventureiros destemidos. Em nossa oferta mais ousada, convidamos você a explorar as profundezas do oceano, onde a escuridão é iluminada por um brilho neon mágico, mas a cada raio de luz, revela-se um pesadelo subaquático de proporções épicas.
                     Ao dançar entre os recifes de coral iluminados por luzes neon, você estará no território do desconhecido. Esteja preparado para avistar criaturas lendárias que desafiam a imaginação. O temido Kraken, com tentáculos tão longos quanto navios, pode emergir das profundezas e desafiar a coragem dos convidados. O lendário Megalodon, um predador gigante dos mares pré-históricos, pode espreitar nas sombras profundas. E outros monstros marinhos de grande porte podem fazer sua presença conhecida.
                 </p>
-                <img src="/images/peixeneon.png" class="img_left-round" alt="">
+
+                 <!-- imagem com para que ela fique redonda e vá para a esquerda -->
+
+                <img src="/images/peixeneon.png" class="img_left-round" alt="peixe com brilho neon">
                 <p>
                     Aqui, adentramos o território dos verdadeiros aventureiros destemidos. Em nossa oferta mais ousada, convidamos você a explorar as profundezas do oceano, onde a escuridão é iluminada por um brilho neon mágico, mas a cada raio de luz, revela-se um pesadelo subaquático de proporções épicas.
                     Ao dançar entre os recifes de coral iluminados por luzes neon, você estará no território do desconhecido. Esteja preparado para avistar criaturas lendárias que desafiam a imaginação. O temido Kraken, com tentáculos tão longos quanto navios, pode emergir das profundezas e desafiar a coragem dos convidados. O lendário Megalodon, um predador gigante dos mares pré-históricos, pode espreitar nas sombras profundas. E outros monstros marinhos de grande porte podem fazer sua presença conhecida.
@@ -104,7 +145,24 @@
                 </p>
             </section>
         </main>
-        <footer></footer>
+
+        <!-- conteudo do footer -->
+
+        <footer>
+
+            <!-- divs genericas para estruturar footer -->
+
+            <div class="icons">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-whatsapp"></i>
+                <i class="bi bi-spotify"></i>
+            </div>
+            <div>
+                <p class="footer_text">@2023 direitos reservados a atlantida</p>
+            </div>
+
+        </footer>
 
 
     </div>

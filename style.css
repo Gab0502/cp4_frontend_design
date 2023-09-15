@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Importando fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); /*importando fonte Lato*/
+
+/* criando a font family Caviar (CaviarDreams baixada no site dafont)  */
 
 @font-face {
     font-family: 'Caviar';
     src: url(/font/CaviarDreams.ttf);
 }
+
+/* variaveis universais */
 
 :root{
     --border-radius:5px;
@@ -45,6 +52,12 @@ header{
     align-items: center;
 }
 
+/* Como todos os navs terão a mesma função no hover, será criado uma regra universal para todos navs */
+
+nav ul li a:hover{
+    color: white;
+}
+
 aside{
     grid-area: aside;
     background-color: rgba(192, 197, 202, 0.836);
@@ -62,36 +75,42 @@ section{
 footer{
     grid-area: footer;
     height: 200px;
-    background-color: brown;
+    background-color:#ADD8E6;
     border-radius: var(--border-radius);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 /* classes relacionadas a texto */
 
+/* .herotittle se refere ao texto utilizado dentro do box model */
 .herotittle{
     color:white;
     font-size: 6vmax;
     font-family: 'Caviar', Times, serif;
 }
+
 h1{
-    font-size: 40px;
+    font-size: 3vmax;
 }
 h2{
     margin:4%
 }
 p{
-    font-size: 25px;
+    font-size: 4vh;
     color: #1111119d;
     margin-left: 5%;
     margin-top: 2%;
 }
 
-nav ul li a:hover{
-    color: white;
-}
+
 
 
 /* edições de classes */
 
+/* classes relacionadas ao header da pagina */
 .logo{
     width: 65%;
 }
@@ -105,12 +124,32 @@ nav ul li a:hover{
 .navitem a{
     text-decoration: none;
     color: black;
-    font-size: 3vh;
+    font-size: 4vh;
 }
+
+/* classes relacionadas ao aside */
+
 .aside_content{
     position: sticky;
     top:0;
 }
+
+.indice ul{
+    list-style: none;
+}
+.indice ul li{
+    padding: 5%;
+}
+.indice ul li a{
+    margin: 5%;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* classes relacionadas ao main */
+
+/* .boxmodel se refere as divs que separam os conteudos */
 .box_model{
     width: 100%;
     height: 50vh;
@@ -125,15 +164,12 @@ nav ul li a:hover{
     border-radius: var(--border-radius);
 }
 
-.img_left{
-    float: left;
-    height: 30%;
-    margin: 5px;
-}
+/* imagens presentes no main */
+
+
 .img_right{
     float: right;
-    height: 45%;
-    margin: 5px;
+    width: 45%;
 }
 
 .img_left-round{
@@ -150,14 +186,13 @@ nav ul li a:hover{
     box-shadow: 5px 5px 10px black;
     margin: 5px;
 }
-.indice ul{
-    list-style: none;
+
+/* classes relacionadas a footer */
+
+.icons{
+    font-size: 4vh;
 }
-.indice ul li{
-    padding: 5%;
-}
-.indice ul li a{
-    margin: 5%;
-    text-decoration: none;
-    color: black;
+.footer_text{
+    margin: auto;
+    font-size: 3vh;
 }
