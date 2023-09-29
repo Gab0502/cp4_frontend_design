@@ -25,14 +25,14 @@
     margin: 0px;
 }
 body{
-    margin: 0px 6% 0px 6%;
+    margin: 0px 6% 0px 6% !important;
     background-image: url(/images/background.png) ;
 }
-.container{
+.custom-container{
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 2fr 2fr 0.1fr;
+    grid-template-rows: 0fr 2fr 2fr 0.1fr;
     grid-template-areas: 
                         "header header header header"
                         "aside main main main"
@@ -48,22 +48,24 @@ header{
     grid-area:header ;
     background-color:#ADD8E6;
     border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
 }
+
 
 /* Como todos os navs terão a mesma função no hover, será criado uma regra universal para todos navs */
 
 nav ul li a:hover{
-    color: white;
+    color: white !important;
 }
-
+article{
+    grid-area: car;
+}
 aside{
     grid-area: aside;
     background-color: rgba(192, 197, 202, 0.836);
     border-radius: var(--border-radius);
 }
 main{
+    margin-top: 0;
     grid-area: main;
     background-color: white;
     border-radius: var(--border-radius);
@@ -78,9 +80,6 @@ footer{
     background-color:#ADD8E6;
     border-radius: var(--border-radius);
     padding: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
 }
 /* classes relacionadas a texto */
@@ -99,7 +98,7 @@ h2{
     margin:4%
 }
 p{
-    font-size: 4vh;
+    font-size: 2vh;
     color: #1111119d;
     margin-left: 5%;
     margin-top: 2%;
@@ -114,17 +113,12 @@ p{
 .logo{
     width: 65%;
 }
-.navbar{
-    display: flex;
-    list-style:none ;
+.bg-light-blue{
+    background-color: #ADD8E6;
 }
-.navitem{
-    padding: 15%;
-}
-.navitem a{
-    text-decoration: none;
-    color: black;
-    font-size: 4vh;
+
+.nav-link:hover{
+    color: white;
 }
 
 /* classes relacionadas ao aside */
