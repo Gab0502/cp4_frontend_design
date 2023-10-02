@@ -173,3 +173,8 @@ p{
     font-size: 4vh;
 }
 
+@media (max-width:768px){
+    body{
+        margin: 0px !important;
+    }
+}
