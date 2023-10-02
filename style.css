@@ -76,8 +76,8 @@ section{
 }
 footer{
     grid-area: footer;
-    height: 200px;
     background-color:#ADD8E6;
+    margin-bottom: 5%;
     border-radius: var(--border-radius);
     padding: 5%;
 
