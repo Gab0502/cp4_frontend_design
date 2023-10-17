@@ -1,101 +1,86 @@
-
 /* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); /* Importando a fonte Lato */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap'); /*importando fonte Lato*/
-
-/* criando a font family Caviar (CaviarDreams baixada no site dafont)  */
-
+/* Criando a font-family Caviar (CaviarDreams baixada no site dafont) */
 @font-face {
     font-family: 'Caviar';
     src: url(/font/CaviarDreams.ttf);
 }
 
-/* variaveis universais */
-
+/* Variáveis universais */
 :root{
-    --border-radius:5px;
+    --border-radius: 5px; /* Definindo uma variável para o raio da borda */
 }
 
-/* contrutores universais e container */
-
+/* Construtores universais e container */
 *{
-    font-family: 'lato', sans-serif;
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    font-family: 'lato', sans-serif; /* Definindo uma fonte padrão para todos os elementos */
+    box-sizing: border-box; /* Faz com que a largura e altura incluam a borda e o preenchimento */
+    padding: 0;
+    margin: 0;
 }
 body{
-    margin: 0px 6% 0px 6% !important;
-    background-image: url(/images/background.png) ;
+    margin: 0 6% 0 6% !important; /* Margens do corpo e imagem de fundo */
+    background-image: url(/images/background.png); /* Configurando uma imagem de fundo para o corpo */
 }
 .custom-container{
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: 0fr 2fr 2fr 0.1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr; /* Definindo colunas para o layout */
     grid-template-areas: 
-                        "header header header header"
-                        "aside main main main"
-                        "aside main main main"
-                        "footer footer footer footer"
-    ;
-
+        "header header header header"
+        "aside main main main"
+        "aside main main main"
+        "footer footer footer footer";
 }
 
-/* edição dos elementos semanticos */
-
+/* Edição dos elementos semânticos */
 header{
-    grid-area:header ;
-    background-color:#ADD8E6;
-    border-radius: var(--border-radius);
+    grid-area: header; /* Configurando a área do layout do cabeçalho */
+    background-color: #ADD8E6; /* Cor de fundo do cabeçalho */
+    border-radius: var(--border-radius); /* Utilizando a variável de raio da borda */
 }
 
-
-/* Como todos os navs terão a mesma função no hover, será criado uma regra universal para todos navs */
-
+/* Como todos os navs terão a mesma função no hover, será criada uma regra universal para todos os navs */
 nav ul li a:hover{
-    color: white !important;
+    color: white !important; /* Cor do texto do link ao passar o mouse */
 }
 article{
-    grid-area: car;
+    grid-area: car; /* Configurando a área do layout do artigo */
 }
 aside{
-    grid-area: aside;
-    background-color: rgba(192, 197, 202, 0.836);
-    border-radius: var(--border-radius);
+    grid-area: aside; /* Configurando a área do layout da barra lateral (aside) */
+    background-color: rgba(192, 197, 202, 0.836); /* Cor de fundo da barra lateral */
+    border-radius: var(--border-radius); /* Utilizando a variável de raio da borda */
 }
 main{
     margin-top: 0;
-    grid-area: main;
-    background-color: white;
-    border-radius: var(--border-radius);
-
+    grid-area: main; /* Configurando a área do layout principal */
+    background-color: white; /* Cor de fundo do conteúdo principal */
+    border-radius: var(--border-radius); /* Utilizando a variável de raio da borda */
 }
 section{
-    margin:5%;
+    margin: 5%;
 }
 footer{
-    grid-area: footer;
-    background-color:#ADD8E6;
+    grid-area: footer; /* Configurando a área do layout do rodapé */
+    background-color: #ADD8E6; /* Cor de fundo do rodapé */
     margin-bottom: 5%;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius); /* Utilizando a variável de raio da borda */
     padding: 5%;
-
 }
-/* classes relacionadas a texto */
 
-/* .herotittle se refere ao texto utilizado dentro do box model */
+/* Classes relacionadas ao texto */
 .herotittle{
-    color:white;
+    color: white;
     font-size: 6vmax;
-    font-family: 'Caviar', Times, serif;
+    font-family: 'Caviar', Times, serif; /* Estilo de fonte para .herotittle */
 }
-
 h1{
     font-size: 3vmax;
 }
 h2{
-    margin:4%
+    margin: 4%;
 }
 p{
     font-size: 2.4vh;
@@ -104,12 +89,8 @@ p{
     margin-top: 2%;
 }
 
-
-
-
-/* edições de classes */
-
-/* classes relacionadas ao header da pagina */
+/* Edições de classes */
+/* Classes relacionadas ao cabeçalho da página */
 .logo{
     width: 65%;
 }
@@ -121,13 +102,39 @@ p{
     color: white;
 }
 
-/* classes relacionadas ao aside */
-
+/* Classes relacionadas à barra lateral (aside) */
 .aside_content{
     position: sticky;
-    top:0;
+    top: 0;
+}
+.vertical-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* Espaçamento interno para os links */
+    border-radius: 5px; /* Raio da borda (opcional) */
+}
+.vertical-nav-itens{
+    font-family: 'Caviar';
+    margin: 25px; /* Adicione margem vertical para separar os links */
+    text-align: center; /* Centralize o texto */
+    text-decoration: none; /* Remova a sublinhado padrão dos links */
+    color: #333; /* Cor do texto dos links */
+    font-size: 20px;
 }
 
+/* Estilo para os itens da navegação vertical */
+.vertical-nav a {
+    text-decoration: none;
+    padding: 5px 10px; /* Espaçamento interno para cada link */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para os itens da navegação quando hover */
+.vertical-nav a:hover {
+    background-color: #007bff; /* Cor de fundo no hover */
+    color: #fff; /* Cor do texto no hover */
+}
 .indice ul{
     list-style: none;
 }
@@ -140,10 +147,8 @@ p{
     color: black;
 }
 
-
-/* classes relacionadas ao main */
-
-/* .boxmodel se refere as divs que separam os conteudos */
+/* Classes relacionadas ao conteúdo principal (main) */
+/* .boxmodel se refere às divs que separam os conteúdos */
 .box_model{
     width: 100%;
     height: 50vh;
@@ -158,15 +163,53 @@ p{
     border-radius: var(--border-radius);
 }
 
-/* imagens presentes no main */
-
+/* Imagens presentes no conteúdo principal (main) */
 .img-border{
     border-radius: var(--border-radius);
-    margin-bottom: 2% ;
+    margin-bottom: 2%;
 }
 
 @media (max-width:768px){
     body{
-        margin: 0px !important;
+        margin: 0 !important;
+    }
+    .custom-container{
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: 1fr; /* Uma única coluna para dispositivos móveis */
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "main"
+            "footer";
+    }
+    header {
+        font-size: 2vmax;
+    }
+    .nav-link {
+        font-size: 2.5vmax;
+    }
+
+    aside {
+        height: 100%; /* Ajuste de altura para a barra lateral em dispositivos móveis */
+    }
+
+    .vertical-nav {
+        flex-direction: row; /* Ou qualquer outra configuração desejada */
+    }
+
+    /* Outros ajustes de estilo conforme necessário */
+
+    .box_model {
+        height: 30vh;
+        padding: 2%;
+    }
+    .img-border {
+        margin-bottom: 1%;
+    }
+    footer {
+        padding: 2%;
+        font-size: 2vmax;
     }
 }
